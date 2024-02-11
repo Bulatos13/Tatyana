@@ -62,6 +62,7 @@ function circleMove(){
 		body[0].style.backgroundColor = 'pink';
 		wrapperRemove();
 		text.style.opacity = 1;
+		text.style.fontSize = 30 + `px`;
 	}
 	console.log(position);
 };
