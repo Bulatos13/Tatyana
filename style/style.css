@@ -227,7 +227,35 @@ body{
 	left: 40px;
 	bottom: 20px;
 }
-
+.star{
+	width: 50px;
+	height: 50px;
+	background-color: #ffd764;
+	opacity: 0;
+	position: absolute;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	transition: 1s ease;
+}
+#s1{
+	top: 20px;
+	left: -5px;
+}
+#s2{
+	bottom: 15px;
+	right: 20px;
+}
+#s3{
+	left: 50%;
+	top: 25%;
+}
+#s4{
+	left: 80%;
+	top: 15%;
+}
+#s5{
+	right: 14%;
+	bottom: 15%;
+}
 @media (max-width: 600px){
 	#flower-box{
 	width: 340px;

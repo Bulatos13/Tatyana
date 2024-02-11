@@ -1,3 +1,5 @@
+let stars  = document.getElementsByClassName('star');
+
 let flowerBox = document.getElementById('flower-box');
 let petal = document.getElementsByClassName('petal');
 
@@ -43,11 +45,18 @@ function circleMove(){
 		} else {
 			circle.style.left = 140 + `px`;
 		}
+		for(let i = 0; i< stars.length; i++){
+			stars[i].style.opacity = 1;
+		}
 		backgroundMove();
 		cloudMove();
 		sunMoon = 'moon';
 	} else if(sunMoon == 'moon'){
 		circle.style.left = 10 + `px`;
+		for(let i = 0; i< stars.length; i++){
+			stars[i].style.opacity = 0;
+		}
+		
 		backgroundMove();
 		cloudMove();
 		sunMoon = 'sun';
@@ -72,6 +81,9 @@ function wrapperRemove(){
 		wrapper.children[i].remove();
 		wrapper.remove();
 		rotor();
+		for(let i = 0; i< stars.length; i++){
+			stars[i].remove();
+		}
 	}
 }
 
