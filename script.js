@@ -33,11 +33,16 @@ function otor() {
 
 let position = 0;
 
+let text = document.getElementById('text');
 let circle = document.getElementById('circle-box');
 let sunMoon = 'sun';
 function circleMove(){
 	if(sunMoon == 'sun'){
-		circle.style.left = 200 + `px`;
+		if(wrapper.offsetWidth == 340){
+			circle.style.left = 200 + `px`;
+		} else {
+			circle.style.left = 140 + `px`;
+		}
 		backgroundMove();
 		cloudMove();
 		sunMoon = 'moon';
@@ -56,6 +61,7 @@ function circleMove(){
 	if(position > 30){
 		body[0].style.backgroundColor = 'pink';
 		wrapperRemove();
+		text.style.opacity = 1;
 	}
 	console.log(position);
 };
@@ -106,3 +112,5 @@ function backgroundMove(){
 
 let wrapper = document.getElementById('wrapper');
 wrapper.addEventListener('click', circleMove);
+
+console.log(wrapper.offsetWidth == 340, wrapper.style.width);
