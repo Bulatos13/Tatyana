@@ -68,7 +68,7 @@ function circleMove(){
 	}
 	position += getRandomInt(5,10);
 	if(position > 30){
-		body[0].style.backgroundColor = '#1b3f3c';
+		body[0].style.backgroundColor = '#de5ae5';
 		wrapperRemove();
 		text.style.opacity = 1;
 		text.style.fontSize = 30 + `px`;
